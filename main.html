@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Q Simulator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <h1>Student Portal Simulator</h1>
+        <div class="help-tip">
+        <p>This project is just a prototype. Expect errors from incorrect text entries and arithmetic exceptions. I am still working on adding buttons to remove elements; so for now if you mess up on entering something; please refresh the page. Do not try to simulate with an empty category</p>
+        </div>
+        <p>This simulation is for students who wish to see their estimated grades because their teachers don't update things online. The system takes into account of weightage of each category. Begin by starting a category, (<i>like tests, quizes, hw</i>). Then enter assignments and pick a category to add to.
+            Click <i>Simulate</i> when done
+        <span style="color:black">    
+        <form id="addingcategory">
+            <p> Create a new Category:
+            <input type="text" placeholder="Enter Name" id="CnameIn">
+            <input placeholder="Enter Weightage" id="CweightIn" type="number" required>
+                <button type="button" onclick="processCat()">Add</button>
+        </form>
+        <form id="addingassignment">
+            <p> Add Assignments to any Category:
+            <input type="text" placeholder="Enter Name" id="AnameIn">
+            <input placeholder="Points possible" id="possible" type="number" required>
+            <input placeholder="Earned" id="earned" type="number" required>
+            <select id="selectCat" name="Select Category"></select>
+            <button type="button" onclick="processAssignment()">Add</button>
+        <div id="catDisplay">
+        </div>
+        </form> <br>
+        <center><button type="button" onclick="update()" class="button-success pure-button">Simulate</button></center>
+        </span>
+        <div id="display">
+            <h3 id="top"></h3>
+            <ul id="stats"></ul>
+            <h3 id="ovr"></h3>
+        </div>
+        <script src="dynamics.js"></script>
+    </body>
+        <footer> <center>
+            Created By: Satya Bhunya <br>
+            <a href="http://satyabh2003@gmail.com/">Contact</a>
+            </center>
+        </footer> 
+</html>
